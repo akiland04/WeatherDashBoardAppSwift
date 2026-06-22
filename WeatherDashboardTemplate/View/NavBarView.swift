@@ -81,18 +81,18 @@ struct NavBarView: View {
 
 
 
-//#Preview {
-//    let vm = MainAppViewModel(context: ModelContext(ModelContainer.preview))
-//    NavBarView()
-//        .environmentObject(vm)
-//}
-
-#Preview("Full Dashboard") {
-    // 👇 This creates a mock ModelContext using your in-memory preview container
+#Preview {
     let vm = MainAppViewModel(context: ModelContext(ModelContainer.preview))
-
-    // 👇 This displays *all* your tab content at once
     NavBarView()
         .environmentObject(vm)
 }
+
+//#Preview("Full Dashboard") {
+//    // 👇 This creates a mock ModelContext using your in-memory preview container
+//    let vm = MainAppViewModel(context: ModelContext(ModelContainer.preview))
+//
+//    // 👇 This displays *all* your tab content at once
+//    NavBarView()
+//        .environmentObject(vm)
+//}
 
